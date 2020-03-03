@@ -5,19 +5,23 @@ var cp = require('child_process');
 
 console.log('father process. PID:', process.pid);
 
-var child = cp.fork(
-  './server.js', 
+var _server = path.resolve('build', 'server.js');
+
+cp.fork(
+  _server, 
   ['./site/webpack.mobile.config.js'],
   {
-    cwd: path.join(__dirname)
+    stdio: 'inherit',
+    cwd: path.resolve('build')
   }
 );
 
-var child = cp.fork(
-  './server.js', 
+cp.fork(
+  _server, 
   ['./site/webpack.desktop.config.js'],
   {
-    cwd: path.join(__dirname)
+    stdio: 'inherit',
+    cwd: path.resolve('build')
   }
 );
 

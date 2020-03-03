@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const cwd = path.join(__dirname, '../');
-const arguments = process.argv.splice(2);
-const configPath = arguments.filter(str => /--c-path/g.test(str))[0].split(':')[1];
+const args = process.argv.splice(2);
+const configPath = args.find(str => /--configPath/g.test(str)).split('=')[1];
 const config = require(path.join(cwd, configPath));
 const {entry, output} = config;
 
@@ -50,7 +50,7 @@ module.exports = {
       filename: 'static/css/[name].[chunkhash:12].css'
     }),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: 'build/index.html',
       favicon: path.join(cwd, 'favicon.ico')
     })
   ].concat(process.env.TRAVIS_CI ? [] : [

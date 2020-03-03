@@ -151,25 +151,13 @@ button {
   font-size: 16px;
   color: #666;
 }
-.ost-documentation {
+.ost-content {
+  min-height: 100%;
   width: 100%;
-  height: inherit;
-  display: flex;
-  justify-content: space-between;
-}
-.ost-documentation-left-main {
-  width: 190px;
-  max-width: 190px;
-  min-width: 190px;
   overflow-y: auto;
-  border-right: 1px solid #f1efeb;
 }
-.ost-documentation-right-main {
-  width: calc(100% - 10px - 190px);
-  min-width: calc(100% - 10px - 190px);
-  max-width: calc(100% - 10px - 190px);
-  display: flex;
-  justify-content: space-between;
+.ost-content-inside {
+  padding: 20px 20px 10px 20px;
 }
 .ost-demo {
   min-height: 100%;
@@ -233,11 +221,23 @@ button {
   background-size: 100%;
   display: block;
 }
-.ost-content {
-  min-height: 100%;
+.ost-documentation {
   width: 100%;
-  overflow-y: auto;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
 }
-.ost-content-inside {
-  padding: 20px 20px 10px 20px;
+.ost-documentation-left-main {
+  width: 190px;
+  max-width: 190px;
+  min-width: 190px;
+  overflow-y: auto;
+  border-right: 1px solid #f1efeb;
+}
+.ost-documentation-right-main {
+  width: calc(100% - 10px - 190px);
+  min-width: calc(100% - 10px - 190px);
+  max-width: calc(100% - 10px - 190px);
+  display: flex;
+  justify-content: space-between;
 }
