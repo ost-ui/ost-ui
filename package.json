@@ -1,6 +1,6 @@
 {
   "name": "ost-ui",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "ost ui for react",
   "main": "dist/npm/index.js",
   "scripts": {
