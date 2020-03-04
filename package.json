@@ -1,6 +1,6 @@
 {
   "name": "ost-ui",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "ost ui for react",
   "main": "dist/npm/index.js",
   "scripts": {
@@ -28,9 +28,13 @@
     "frontend",
     "mobile"
   ],
+  "homepage": "https://ost-ui.github.io/ost-ui/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/guibwl/spinacia-cli"
+    "url": "https://github.com/ost-ui/ost-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ost-ui/ost-ui/issues"
   },
   "author": "OST",
   "contributors": [
